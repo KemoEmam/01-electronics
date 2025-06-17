@@ -16,7 +16,7 @@ class LeadSectionTitle extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(color: Colors.black26),
         borderRadius: BorderRadius.circular(12),
-        color: backgroundColor,
+        color: backgroundColor ?? Colors.white,
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,

@@ -202,10 +202,11 @@ class _AddNewActionViewBodyState extends State<AddNewActionViewBody> {
               ],
             ),
             const SizedBox(height: 16),
-            const LeadSectionTitle('ACCOUNT NOTES'),
+            const LeadSectionTitle('ACCOUNT NOTES',
+                backgroundColor: Color(0xffb8b8b8)),
             const SizedBox(height: 8),
             LeadInfoCard(
-              backgroundColor: AppColors.primaryColor.withValues(alpha: 0.7),
+              backgroundColor: Color(0xffb8b8b8),
               children: [
                 CustomLeadsFormField(
                   fieldLabel: 'Enter Notes',

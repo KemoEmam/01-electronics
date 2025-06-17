@@ -53,6 +53,7 @@ class _SearchLeadsWidgetState extends State<SearchLeadsWidget> {
   @override
   Widget build(BuildContext context) {
     return SearchAnchor.bar(
+      barBackgroundColor: WidgetStateProperty.all(Colors.grey.shade200),
       searchController: _controller,
       barHintText: widget.hintText,
       viewHintText: 'Search...',

@@ -221,7 +221,7 @@ class _AddNewActionViewBodyState extends State<AddNewActionViewBody> {
             Center(
               child: ElevatedButton.icon(
                 onPressed: _submitAction,
-                icon: const Icon(Icons.add),
+                icon: const Icon(Icons.add, color: Colors.white),
                 label: Text(
                   "Save Action",
                   style: AppTextStyles.interSemiBold14.copyWith(

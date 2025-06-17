@@ -1,17 +1,46 @@
-# electronics_task
+# 📱 01 Electronics CRM App
 
-A new Flutter project.
+A modern CRM app branded with **01 Electronics** style.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- 🔐 **Authentication**
+  - Sign In 🔑
+  - Sign Up 📝
+  - Forgot Password 🔁
 
-A few resources to get you started if this is your first Flutter project:
+- 📊 **Dashboard**
+  - Sales Summary Tiles 📈
+  - Interactive Chart View with Syncfusion 🧩
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 👥 **Leads**
+  - View All Leads 👀
+  - Add New Lead ➕
+  - HOT / NEW / COLD status tags with visual indicators 🟢🟡🔴
+  - Form validation ✅
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# 01-electronics
+- 📆 **Actions**
+  - Add New Action (Next + Last action types) ⏱️
+  - View Actions per Date 📅
+  - Filtered Actions List with Color-Coded Cards 🎨
+  - Action Details: Lead, Status, Notes, Date, Time 📝
+
+- 🧱 **Architecture & Code**
+  - Clean Architecture 🧼
+  - Cubit (Bloc) for state management ⚙️
+  - Reusable widgets and modular file structure 🧩
+  - Shared Themes & Styles for consistent UI 🌈
+
+## 🛠️ Tech Stack
+
+- Flutter (Latest Stable)
+- Firebase Auth (Sign in / Sign up / reset password)
+- Syncfusion Charts 📊
+- Shared Preferences (for local storage)
+- Cubit (Bloc Library) 🧠
+
+## 📸 Screenshots
+
+> _Coming Soon_ – includes auth feature, leads view, actions view, and dashboard highlights.
+
+

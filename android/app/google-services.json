@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1073818368687",
+    "project_id": "electronics-d2d4e",
+    "storage_bucket": "electronics-d2d4e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073818368687:android:b04cea89712d1fe9bef25a",
+        "android_client_info": {
+          "package_name": "com.example.electronics_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTwpZrYP3CKBTWexEhDn-EY74e2_Dlcto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

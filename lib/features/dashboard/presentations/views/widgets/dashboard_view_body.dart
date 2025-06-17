@@ -1,7 +1,6 @@
 import 'package:electronics_task/core/helper/functions.dart';
 import 'package:electronics_task/core/themes/styles/app_colors.dart';
 import 'package:electronics_task/core/themes/styles/app_text_styles.dart';
-import 'package:electronics_task/features/auth/domain/entities/user_entity.dart';
 import 'package:electronics_task/features/dashboard/presentations/views/widgets/leads_chart_section.dart';
 import 'package:electronics_task/features/dashboard/presentations/views/widgets/summary_tile_widget.dart';
 import 'package:electronics_task/features/dashboard/presentations/views/widgets/weekly_activity_section.dart';
@@ -12,8 +11,7 @@ class DashboardViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final UserEntity user = getUser();
-
+    final user = getUser();
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
@@ -21,7 +19,7 @@ class DashboardViewBody extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 26),
+                padding: const EdgeInsets.fromLTRB(16, 36, 16, 26),
                 decoration: BoxDecoration(
                   color: AppColors.primaryColor,
                   borderRadius: const BorderRadius.vertical(
@@ -42,12 +40,16 @@ class DashboardViewBody extends StatelessWidget {
                             fontSize: 14,
                           ),
                         ),
-                        const SizedBox(height: 4),
-                        Text('Hi, ${user.name} 👋',
-                            style: AppTextStyles.interBold18.copyWith(
-                              color: Colors.white,
-                              fontSize: 20,
-                            )),
+                        const SizedBox(height: 6),
+                        Text(
+                          'Hi, ${user.name} 👋',
+                          style: AppTextStyles.interBold18.copyWith(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
                       ],
                     ),
                     Row(

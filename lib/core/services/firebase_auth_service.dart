@@ -8,20 +8,20 @@ class FirebaseAuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final logger = sl<Logger>();
 
-  Future<User> createUserWithEmailAndPassword(
-      {required String email,
-      required String password,
-      required String name}) async {
+  Future<User> createUserWithEmailAndPassword({
+    required String email,
+    required String password,
+    required String name,
+  }) async {
     try {
       final credential = await _firebaseAuth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-      await credential.user?.updateDisplayName(name);
-      await credential.user?.reload();
-      final updatedUser = _firebaseAuth.currentUser;
 
-      return updatedUser!;
+      await credential.user!.updateDisplayName(name);
+      await credential.user!.reload();
+      return _firebaseAuth.currentUser!;
     } on FirebaseAuthException catch (e) {
       logger.w(
           'Exception in FirebaseAuthService.createUserWithEmailAndPassword: $e and code is:${e.code}');

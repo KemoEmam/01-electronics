@@ -24,7 +24,7 @@ class AuthRepoImpl extends AuthRepo {
           name: name, email: email, password: password);
       final userEntity =
           UserEntity(uId: user.uid, name: name, email: user.email!);
-
+      await saveUserData(user: userEntity);
       return right(userEntity);
     } on CustomExceptions catch (e) {
       return left(ServerFailure(message: e.message));
@@ -43,22 +43,8 @@ class AuthRepoImpl extends AuthRepo {
       final user = await firebaseAuthService.signInWithEmailAndPassword(
           email: email, password: password);
 
-      String? json = PrefsService.getString(kUserData);
-      String fallbackName = '';
-
-      if (json != null) {
-        final savedUser = UserModel.fromMap(jsonDecode(json));
-        fallbackName = savedUser.name;
-      }
-
       final userEntity = UserEntity(
-        uId: user.uid,
-        name: user.displayName?.isNotEmpty == true
-            ? user.displayName!
-            : fallbackName,
-        email: user.email!,
-      );
-
+          uId: user.uid, name: user.displayName ?? '', email: user.email!);
       await saveUserData(user: userEntity);
 
       return right(userEntity);
@@ -88,15 +74,13 @@ class AuthRepoImpl extends AuthRepo {
   }
 
   @override
-  Future<UserEntity> saveUserData({required UserEntity user}) async {
+  Future saveUserData({required UserEntity user}) async {
     var jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
-
     await PrefsService.setString(kUserData, jsonData);
-    return user;
   }
 
   @override
   Future<void> signOut() async {
-    return await firebaseAuthService.signOut();
+    return firebaseAuthService.signOut();
   }
 }

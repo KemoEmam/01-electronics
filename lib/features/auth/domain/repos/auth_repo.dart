@@ -9,7 +9,7 @@ abstract class AuthRepo {
       String email, String password);
   Future<void> resetPasswordWithEmail(String email);
 
-  Future<UserEntity> saveUserData({required UserEntity user});
+  Future saveUserData({required UserEntity user});
 
   Future<void> signOut();
 }

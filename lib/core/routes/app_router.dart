@@ -92,10 +92,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: Routes.projects,
-              builder: (context, state) => BlocProvider(
-                create: (context) => SigninCubit(sl<AuthRepo>()),
-                child: const ProjectsView(),
-              ),
+              builder: (context, state) => const ProjectsView(),
             ),
           ],
         ),
@@ -107,6 +104,9 @@ final router = GoRouter(
           ),
           BlocProvider(
             create: (context) => ActionCubit(),
+          ),
+          BlocProvider(
+            create: (context) => SigninCubit(sl<AuthRepo>()),
           ),
         ],
         child: NavigationBarLayout(

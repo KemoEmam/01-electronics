@@ -8,7 +8,6 @@ import 'package:electronics_task/features/auth/domain/entities/user_entity.dart'
 //func to fetch stored user data eg. name, email, uId
 UserEntity getUser() {
   var jsonString = PrefsService.getString(kUserData);
-
   var userEntity = UserModel.fromMap(jsonDecode(jsonString));
   return userEntity;
 }

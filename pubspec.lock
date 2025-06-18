@@ -256,15 +256,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  forbidden_pack:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: main
-      resolved-ref: cc1f0216c5be959f18e79e32148779522fca0bff
-      url: "https://github.com/KemoEmam/ForbiddenPack.git"
-    source: git
-    version: "0.0.1"
   get_it:
     dependency: "direct main"
     description:

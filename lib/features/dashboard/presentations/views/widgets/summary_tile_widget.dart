@@ -5,6 +5,7 @@ class SummaryTile extends StatelessWidget {
   final String count;
   final IconData icon;
   final Color color;
+  final Color? backgroundColor;
 
   const SummaryTile({
     super.key,
@@ -12,6 +13,7 @@ class SummaryTile extends StatelessWidget {
     required this.count,
     required this.icon,
     required this.color,
+    this.backgroundColor,
   });
 
   @override
@@ -22,6 +24,7 @@ class SummaryTile extends StatelessWidget {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
         child: Card(
+          color: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           elevation: 1.5,

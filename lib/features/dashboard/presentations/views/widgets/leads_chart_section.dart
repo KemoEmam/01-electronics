@@ -1,4 +1,4 @@
-import 'package:electronics_task/core/themes/styles/app_colors.dart';
+import 'package:electronics_task/core/themes/styles/app_text_styles.dart';
 import 'package:electronics_task/features/dashboard/domain/entities/chart_data_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -12,15 +12,12 @@ class LeadsChartSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Leads by Status',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: AppColors.primaryColor,
-          ),
+          'Leads Overview',
+          style: AppTextStyles.interBold16.copyWith(),
         ),
         const SizedBox(height: 12),
         Card(
+          color: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           elevation: 2,
@@ -37,9 +34,9 @@ class LeadsChartSection extends StatelessWidget {
                 series: <PieSeries<ChartDataEntity, String>>[
                   PieSeries<ChartDataEntity, String>(
                     dataSource: [
-                      ChartDataEntity('New', 20),
-                      ChartDataEntity('In Progress', 12),
-                      ChartDataEntity('Converted', 10),
+                      ChartDataEntity('New', 30),
+                      ChartDataEntity('In Progress', 13),
+                      ChartDataEntity('Converted', 9),
                     ],
                     xValueMapper: (ChartDataEntity data, _) => data.label,
                     yValueMapper: (ChartDataEntity data, _) => data.value,

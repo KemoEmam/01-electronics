@@ -19,69 +19,93 @@ class DashboardViewBody extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.fromLTRB(16, 36, 16, 26),
+                padding: EdgeInsets.symmetric(vertical: 36),
                 decoration: BoxDecoration(
                   color: AppColors.primaryColor,
                   borderRadius: const BorderRadius.vertical(
                     bottom: Radius.circular(24),
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    // Greeting Section
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          _getGreeting(),
-                          style: const TextStyle(
-                            color: Colors.white70,
-                            fontSize: 14,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Builder(
+                            builder: (context) => IconButton(
+                              icon: const Icon(Icons.menu_rounded,
+                                  color: Colors.white),
+                              onPressed: () {
+                                Scaffold.of(context).openDrawer();
+                              },
+                              padding: EdgeInsets.zero,
+                              constraints: const BoxConstraints(),
+                            ),
                           ),
-                        ),
-                        const SizedBox(height: 6),
-                        Text(
-                          'Hi, ${user.name} 👋',
-                          style: AppTextStyles.interBold18.copyWith(
-                            color: Colors.white,
-                            fontSize: 20,
+                          const SizedBox(width: 8),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _getGreeting(),
+                                style: const TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: 14,
+                                ),
+                              ),
+                              const SizedBox(height: 6),
+                              Text(
+                                'Hi ${user.name} 👋',
+                                style: AppTextStyles.interBold18.copyWith(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ],
                           ),
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
+                        ],
+                      ),
+                      Transform.translate(
+                        offset: const Offset(0, 12),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor:
+                                  Colors.white.withValues(alpha: 0.2),
+                              child: IconButton(
+                                icon: const Icon(Icons.notifications_none,
+                                    color: Colors.white, size: 25),
+                                onPressed: () {},
+                              ),
+                            ),
+                            const SizedBox(width: 6),
+                          ],
                         ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        IconButton(
-                          icon: const Icon(Icons.notifications_none,
-                              color: Colors.white),
-                          onPressed: () {},
-                        ),
-                        const SizedBox(width: 8),
-                        const CircleAvatar(
-                          backgroundColor: Colors.white,
-                          child: Icon(Icons.person, color: Colors.black54),
-                        ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 16),
-
-                    // Summary Tiles
                     Wrap(
-                      spacing: 14,
+                      spacing: 25,
                       runSpacing: 14,
                       children: const [
                         SummaryTile(
+                          backgroundColor: Color(0xFFE0F0FF),
                           title: 'Leads',
                           count: '42',
                           icon: Icons.people_alt,
@@ -117,11 +141,11 @@ class DashboardViewBody extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: AppColors.primaryColor,
                       ),
                     ),
                     const SizedBox(height: 12),
                     Card(
+                      color: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),

@@ -1,4 +1,3 @@
-import 'package:electronics_task/core/themes/styles/app_colors.dart';
 import 'package:electronics_task/core/themes/styles/app_text_styles.dart';
 import 'package:electronics_task/features/dashboard/domain/entities/chart_data_entity.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +13,7 @@ class WeeklyActivitySection extends StatelessWidget {
       children: [
         Text(
           'Weekly Activity',
-          style:
-              AppTextStyles.interBold16.copyWith(color: AppColors.primaryColor),
+          style: AppTextStyles.interBold16,
         ),
         const SizedBox(height: 12),
         Card(
@@ -25,6 +23,7 @@ class WeeklyActivitySection extends StatelessWidget {
           child: SizedBox(
             height: 220,
             child: SfCartesianChart(
+              backgroundColor: Colors.grey.shade50,
               primaryXAxis: CategoryAxis(),
               series: <CartesianSeries>[
                 ColumnSeries<ChartDataEntity, String>(

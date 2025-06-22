@@ -1,3 +1,4 @@
+import 'package:electronics_task/features/dashboard/presentations/views/widgets/dashboard_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/dashboard_view_body.dart';
@@ -7,8 +8,9 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+      drawer: DashboardDrawer(),
+      body: const SafeArea(
         child: DashboardViewBody(),
       ),
     );

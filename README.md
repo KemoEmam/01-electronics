@@ -25,12 +25,12 @@ A modern CRM app branded with **01 Electronics** style.
   - Filtered Actions List with Color-Coded Cards 🎨
   - Action Details: Lead, Status, Notes, Date, Time 📝
  
-📁 **Projects**
-- View All Projects 📂
-- Add New Project ➕
-- Project Cards with Key Info (Client, Deadline, Status) 🧾
-- Color Indicators based on Project Status 🟩🟨🟥
-- Connect Projects with Related Leads and Actions 🔗
+- 📁 **Projects**
+  - View All Projects 📂
+  - Add New Project ➕
+  - Project Cards with Key Info (Client, Deadline, Status) 🧾
+  - Color Indicators based on Project Status 🟩🟨🟥
+  - Connect Projects with Related Leads and Actions 🔗
 
 - 🧱 **Architecture & Code**
   - Clean Architecture 🧼

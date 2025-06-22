@@ -1,46 +1,73 @@
-# 📱 01 Electronics CRM App
+📱 01 Electronics CRM App
+A modern CRM app branded with 01 Electronics style.
 
-A modern CRM app branded with **01 Electronics** style.
+✨ Features
+🔐 Authentication
 
-## ✨ Features
+Sign In 🔑
 
-- 🔐 **Authentication**
-  - Sign In 🔑
-  - Sign Up 📝
-  - Forgot Password 🔁
+Sign Up 📝
 
-- 📊 **Dashboard**
-  - Sales Summary Tiles 📈
-  - Interactive Chart View with Syncfusion 🧩
+Forgot Password 🔁
 
-- 👥 **Leads**
-  - View All Leads 👀
-  - Add New Lead ➕
-  - HOT / NEW / COLD status tags with visual indicators 🟢🟡🔴
-  - Form validation ✅
+📊 Dashboard
 
-- 📆 **Actions**
-  - Add New Action (Next + Last action types) ⏱️
-  - View Actions per Date 📅
-  - Filtered Actions List with Color-Coded Cards 🎨
-  - Action Details: Lead, Status, Notes, Date, Time 📝
+Sales Summary Tiles 📈
 
-- 🧱 **Architecture & Code**
-  - Clean Architecture 🧼
-  - Cubit (Bloc) for state management ⚙️
-  - Reusable widgets and modular file structure 🧩
-  - Shared Themes & Styles for consistent UI 🌈
+Interactive Chart View with Syncfusion 🧩
 
-## 🛠️ Tech Stack
+👥 Leads
 
-- Flutter (Latest Stable)
-- Firebase Auth (Sign in / Sign up / reset password)
-- Syncfusion Charts 📊
-- Shared Preferences (for local storage)
-- Cubit (Bloc Library) 🧠
+View All Leads 👀
 
-## 📸 Screenshots
+Add New Lead ➕
 
-> _Coming Soon_ – includes auth feature, leads view, actions view, and dashboard highlights.
+HOT / NEW / COLD status tags with visual indicators 🟢🟡🔴
 
+Form validation ✅
 
+📆 Actions
+
+Add New Action (Next + Last action types) ⏱️
+
+View Actions per Date 📅
+
+Filtered Actions List with Color-Coded Cards 🎨
+
+Action Details: Lead, Status, Notes, Date, Time 📝
+
+📁 Projects
+
+View All Projects 📂
+
+Add New Project ➕
+
+Project Cards with Key Info (Client, Deadline, Status) 🧾
+
+Color Indicators based on Project Status 🟩🟨🟥
+
+Connect Projects with Related Leads and Actions 🔗
+
+🧱 Architecture & Code
+
+Clean Architecture 🧼
+
+Cubit (Bloc) for state management ⚙️
+
+Reusable widgets and modular file structure 🧩
+
+Shared Themes & Styles for consistent UI 🌈
+
+🛠️ Tech Stack
+Flutter (Latest Stable)
+
+Firebase Auth (Sign in / Sign up / reset password)
+
+Syncfusion Charts 📊
+
+Shared Preferences (for local storage)
+
+Cubit (Bloc Library) 🧠
+
+📸 Screenshots
+Coming Soon – includes auth feature, leads view, actions view, projects view, and dashboard highlights.
